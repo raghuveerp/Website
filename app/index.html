@@ -23,13 +23,9 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" type="text/css" href="styles/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
     <link rel="stylesheet" type="text/css" href="styles/fonts/fontello/css/fontello.css">
-    <!--<link rel="stylesheet" type="text/css" href="js/jquery.magnific-popup/magnific-popup.css">-->
-    <!--<link rel="stylesheet" type="text/css" href="js/jquery.uniform/uniform.default.css">-->
     <link rel="stylesheet" type="text/css" href="styles/typed.css">
-    <!--<link rel="stylesheet" type="text/css" href="styles/animations.css">-->
-    <link rel="stylesheet" type="text/css" href="styles/align.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
-    <link rel="stylesheet" type="text/css" href="styles/768.css">
+    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
     <!-- endbuild -->
 </head>
 <body ng-app="raghuveer">
@@ -38,65 +34,43 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<!-- Add your site or application content here -->
-<header id="masthead" class="header" role="banner">
-    <a class="menu-toggle toggle-link"></a>
-    <h1 class="site-title mobile-title">RAGHUVEER</h1>
-
-    <!-- header-wrap -->
-    <div class="header-wrap">
-        <h1 class="site-title">RAGHUVEER</h1>
-        <!-- NAV MENU -->
-        <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-            <div class="nav-menu">
-                <ul>
-                    <li><a ng-href="#/home"><i class="pe-7s-home"></i>Home</a></li>
-                    <li><a ng-href="#/about"><i class="pe-7s-user"></i>About Me</a></li>
-                    <li><a ng-href="#/resume"><i class="pe-7s-id"></i>Resume</a></li>
-                    <li><a ng-href="#/blog"><i class="pe-7s-notebook"></i>Blog</a></li>
-                    <li><a ng-href="#/contact"><i class="pe-7s-call"></i>Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!-- NAV MENU -->
-
-        <!-- SEARCH -->
-        <div class="header-search">
-            <form role="search" method="get" id="search-form" action="#">
-                <input type="text" value="" name="s" id="search" placeholder="enter word">
-                <input type="submit" id="search-submit" title="Search" value="→">
-            </form>
-        </div>
-        <!-- SEARCH -->
-
-        <!-- header-bottom -->
-        <div class="header-bottom">
-
-            <!-- SOCIAL -->
-            <ul class="social">
-                <li><a class="facebook" href="https://www.facebook.com/raghuveer" target="_blank"></a></li>
-                <li><a class="twitter" href="https://twitter.com/raghuuveer" target="_blank"></a></li>
-                <li><a class="linkedin" href="https://www.linkedin.com/in/raghuveerp" target="_blank"></a></li>
-                <li><a class="stack-overflow" href="https://stackoverflow.com/users/792479/raghuveer" target="_blank"></a></li>
-            </ul>
-            <!-- SOCIAL -->
-
-            <!-- copy-text -->
-            <div class="copy-text">
-                <p>&copy; 2016 Raghuveer</p>
-            </div>
-            <!-- copy-text -->
-        </div>
-        <!-- header-bottom -->
-    </div>
-    <!-- header-wrap -->
-</header>
-<!-- HEADER -->
-
 <!-- .site-main -->
-<div ng-view="" id="main" class="site-main"> <!-- PAGE : HOME -->
+<div ng-view id="main" class="">
 
 </div>
+
+<footer>
+    <!-- NAV MENU -->
+
+    <nav id="primary-navigation" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a ng-href="#/home"><i class="pe-7s-home p-s"></i>raghuveer.us</a></li>
+                <li><a ng-href="#/about"><i class="pe-7s-user"></i>about me</a></li>
+                <li><a ng-href="#/blog"><i class="pe-7s-notebook"></i>blogs</a></li>
+                <li><a ng-href="#/contact"><i class="pe-7s-call"></i>contact</a></li>
+                <li class="dropup">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="pe-7s-id"></i>resume</a>
+                    <ul class="dropdown-menu">
+                        <li><a ng-href="#/resume">resume</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">education</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">work experience</a></li>
+                        <li><a href="#">technical skills</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">testimonials</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><p class="navbar-text">Signed in as Mark Otto</p></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- NAV MENU -->
+</footer>
 
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
