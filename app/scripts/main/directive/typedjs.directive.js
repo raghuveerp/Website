@@ -13,7 +13,7 @@ angular.module('raghuveer')
                     backDelay: 2000,
                     contentType: "text",
                     showCursor: true,
-                    loop: true,
+                    loop: false,
                     cursorChar: "|"
                 };
 
