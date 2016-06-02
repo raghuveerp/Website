@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Personal website for Raghuveer Phull.">
+    <meta name="keywords" content="raghuveer, phull, portfolio">
+    <meta name="author" content="Raghuveer">
+
+    <title> raghuveer.us</title>
+
+    <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/ngprogress/ngProgress.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" type="text/css" href="styles/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" type="text/css" href="styles/fonts/fontello/css/fontello.css">
+    <!--<link rel="stylesheet" type="text/css" href="js/jquery.magnific-popup/magnific-popup.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="js/jquery.uniform/uniform.default.css">-->
+    <link rel="stylesheet" type="text/css" href="styles/typed.css">
+    <!--<link rel="stylesheet" type="text/css" href="styles/animations.css">-->
+    <link rel="stylesheet" type="text/css" href="styles/align.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/768.css">
+    <!-- endbuild -->
+</head>
+<body ng-app="raghuveer">
+<!--[if lte IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<header id="masthead" class="header" role="banner">
+    <a class="menu-toggle toggle-link"></a>
+    <h1 class="site-title mobile-title">RAGHUVEER</h1>
+
+    <!-- header-wrap -->
+    <div class="header-wrap">
+        <h1 class="site-title">RAGHUVEER</h1>
+        <!-- NAV MENU -->
+        <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+            <div class="nav-menu">
+                <ul>
+                    <li><a ng-href="#/home"><i class="pe-7s-home"></i>Home</a></li>
+                    <li><a ng-href="#/about"><i class="pe-7s-user"></i>About Me</a></li>
+                    <li><a ng-href="#/resume"><i class="pe-7s-id"></i>Resume</a></li>
+                    <li><a ng-href="#/blog"><i class="pe-7s-notebook"></i>Blog</a></li>
+                    <li><a ng-href="#/contact"><i class="pe-7s-call"></i>Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- NAV MENU -->
+
+        <!-- SEARCH -->
+        <div class="header-search">
+            <form role="search" method="get" id="search-form" action="#">
+                <input type="text" value="" name="s" id="search" placeholder="enter word">
+                <input type="submit" id="search-submit" title="Search" value="→">
+            </form>
+        </div>
+        <!-- SEARCH -->
+
+        <!-- header-bottom -->
+        <div class="header-bottom">
+
+            <!-- SOCIAL -->
+            <ul class="social">
+                <li><a class="facebook" href="https://www.facebook.com/raghuveer" target="_blank"></a></li>
+                <li><a class="twitter" href="https://twitter.com/raghuuveer" target="_blank"></a></li>
+                <li><a class="linkedin" href="https://www.linkedin.com/in/raghuveerp" target="_blank"></a></li>
+                <li><a class="stack-overflow" href="https://stackoverflow.com/users/792479/raghuveer" target="_blank"></a></li>
+            </ul>
+            <!-- SOCIAL -->
+
+            <!-- copy-text -->
+            <div class="copy-text">
+                <p>&copy; 2016 Raghuveer</p>
+            </div>
+            <!-- copy-text -->
+        </div>
+        <!-- header-bottom -->
+    </div>
+    <!-- header-wrap -->
+</header>
+<!-- HEADER -->
+
+<!-- .site-main -->
+<div ng-view="" id="main" class="site-main"> <!-- PAGE : HOME -->
+
+</div>
+
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<script>
+    !function (A, n, g, u, l, a, r) {
+        A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+                (A[l].q = A[l].q || []).push(arguments)
+            }, A[l].l = +new Date, a = n.createElement(g),
+            r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+</script>
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/typed.js/dist/typed.min.js"></script>
+<script src="bower_components/ngprogress/build/ngprogress.min.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/main/controller/main.js"></script>
+<script src="scripts/main/directive/typedjs.directive.js"></script>
+<script src="scripts/contact/controller/contact.js"></script>
+<script src="scripts/resume/controller/resume.js"></script>
+<script src="scripts/about/controller/about.js"></script>
+<script src="scripts/blogs/controller/blog.js"></script>
+<!-- endbuild -->
+</body>
+</html>
