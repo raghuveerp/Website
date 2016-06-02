@@ -64,7 +64,7 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><p class="navbar-text">Signed in as Mark Otto</p></li>
+                <li><p ng-controller="dateController" class="navbar-text p-r-m">&copy; {{date}} Raghuveer Phull</p></li>
             </ul>
         </div>
     </nav>
@@ -106,6 +106,7 @@
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
 <script src="scripts/main/controller/main.js"></script>
+<script src="scripts/main/controller/date.controller.js"></script>
 <script src="scripts/main/directive/typedjs.directive.js"></script>
 <script src="scripts/contact/controller/contact.js"></script>
 <script src="scripts/resume/controller/resume.js"></script>

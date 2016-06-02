@@ -1,1 +1,7 @@
-body { padding-bottom: 5%; }
+body {
+    padding-bottom: 5%;
+}
+
+.p-r-m {
+    padding-right: 10px;
+}
