@@ -4,5 +4,9 @@
 
 angular.module('raghuveer')
     .controller('dateController', function ($scope) {
-        $scope.date = '2016';
-    })
+        var getYear = function () {
+            return new Date().getFullYear();
+        };
+
+        $scope.date = getYear();
+    });
