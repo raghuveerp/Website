@@ -1,0 +1,36 @@
+body {
+    padding-bottom: 5%;
+}
+
+.p-r-m {
+    padding-right: 20px;
+}
+
+.p-l-xs {
+    padding-left: 2px;
+}
+
+.fa-fw {
+    width: 1.75em;
+    text-align: center;
+}
+.middle {
+    position: absolute;
+    top: 25%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    min-width: 250px;
+}
+
+.introduction {
+    padding: 10px;
+    display: block;
+    white-space: pre;
+    max-width: 100%;
+    line-height: 1.25em;
+    position: fixed;
+}
+
+.introduction-text {
+
+}

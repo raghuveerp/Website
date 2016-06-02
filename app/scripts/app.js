@@ -31,9 +31,9 @@ angular
                 controllerAs: 'about'
             })
             .when('/resume', {
-                  templateUrl: 'scripts/resume/view/resume.html',
-                  controller: 'ResumeController',
-                  controllerAs: 'resume'
+                templateUrl: 'scripts/resume/view/resume.html',
+                controller: 'ResumeController',
+                controllerAs: 'resume'
             })
             .when('/contact', {
                 templateUrl: 'scripts/contact/view/contact.html',

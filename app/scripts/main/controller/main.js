@@ -9,5 +9,5 @@
  */
 angular.module('raghuveer')
     .controller('MainController', [ '$scope', function ($scope) {
-        $scope.input = ['Software Engineer..', 'Tools Developer..', 'Travel Enthusiast..', 'Food Lover..'];
+        $scope.input = ['Hello Stranger..^2000 \nYou are the one stalking Raghuveer. ^2000 \nSomething something'];
     }]);
