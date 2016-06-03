@@ -309,7 +309,7 @@ a:hover {
 .middle {
     position: absolute;
     top: 30%;
-    left: 40%;
+    left: 45%;
     transform: translate(-50%, -50%);
     min-width: 250px;
 }
