@@ -3,10 +3,14 @@
  */
 
 angular.module('raghuveer')
-    .controller('dateController', function ($scope) {
+    .controller('defaultController', function ($scope, $location) {
         var getYear = function () {
             return new Date().getFullYear();
         };
 
         $scope.date = getYear();
+
+        $scope.isActive = function (viewLocation) {
+            return viewLocation === $location.path();
+        };
     });

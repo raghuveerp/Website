@@ -9,11 +9,11 @@ angular.module('raghuveer')
             link: function ($scope, $element, $attrs) {
                 var options = {
                     strings: $scope.strings,
-                    typeSpeed: 100,
+                    typeSpeed: 80,
                     backDelay: 2000,
                     contentType: "text",
                     showCursor: true,
-                    loop: true,
+                    loop: false,
                     cursorChar: "|"
                 };
 
