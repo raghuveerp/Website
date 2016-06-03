@@ -332,7 +332,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= yeoman.dist %>',
-                    src: ['*.html'],
+                    src: ['*/*.html'],
                     dest: '<%= yeoman.dist %>'
                 }]
             }
@@ -481,11 +481,5 @@ module.exports = function (grunt) {
         'newer:jshint',
         'test',
         'build'
-    ]);
-
-    grunt.registerTask('release', [
-        'uglify',
-        'cssmin',
-        'copy'
     ]);
 };
