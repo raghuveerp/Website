@@ -3,14 +3,15 @@ angular.module('raghuveer')
         return {
             restrict: 'E',
             scope: {
-                strings: '='
+                strings: '=',
+                options: '='
             },
             template: '<span id="typedtext"></span>',
             link: function ($scope, $element, $attrs) {
-                var options = {
+                var options = $scope.options || {
                     strings: $scope.strings,
-                    typeSpeed: 80,
-                    backDelay: 2000,
+                    typeSpeed: 50,
+                    backDelay: 200,
                     contentType: "text",
                     showCursor: true,
                     loop: false,
