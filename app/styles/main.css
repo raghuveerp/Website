@@ -166,7 +166,7 @@ p {
 }
 
 .navbar-default .navbar-toggle {
-    border-color: #2E363A;
+    border-color: #ecf0f1;
 }
 
 .navbar-default .navbar-toggle:hover,
@@ -175,7 +175,7 @@ p {
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #2E363A;
+    background-color: #ecf0f1;
 }
 
 .navbar-default .navbar-link {
@@ -294,7 +294,11 @@ a:hover {
 }
 
 .p-r-m {
-    padding-right: 20px;
+    padding-right: 10px;
+}
+
+.p-l-m {
+    padding-left: 10px;
 }
 
 .p-l-xs {
@@ -309,7 +313,7 @@ a:hover {
 .middle {
     position: absolute;
     top: 30%;
-    left: 45%;
+    left: 42%;
     transform: translate(-50%, -50%);
     min-width: 250px;
 }
