@@ -126,7 +126,7 @@ p {
 
 .navbar-default {
     background-color: #2E363A;
-    border-color: #1c262b;
+    border-color: #e7e7e7;
 }
 
 .navbar-default .navbar-brand {
@@ -184,6 +184,10 @@ p {
 
 .navbar-default .navbar-link:hover {
     color: #096;
+}
+
+.navbar-default .navbar-collapse {
+    border-color: #e7e7e7;
 }
 
 @media (max-width: 767px) {
