@@ -24,29 +24,39 @@ angular
             .when('/', {
                 templateUrl: 'view/main.html',
                 controller: 'MainController',
-                controllerAs: 'main'
+                controllerAs: 'main',
+                title: 'Home'
             })
             .when('/about', {
                 templateUrl: 'view/about.html',
                 controller: 'AboutController',
-                controllerAs: 'about'
+                controllerAs: 'about',
+                title : 'About Me'
             })
             .when('/resume', {
                 templateUrl: 'view/resume.html',
                 controller: 'ResumeController',
-                controllerAs: 'resume'
+                controllerAs: 'resume',
+                title: 'Resume'
             })
             .when('/contact', {
                 templateUrl: 'view/contact.html',
                 controller: 'ContactController',
-                controllerAs: 'contact'
+                controllerAs: 'contact',
+                title : 'Contact Me'
             })
             .when('/blog', {
                 templateUrl: 'view/blog.html',
                 controller: 'BlogController',
-                controllerAs: 'blog'
+                controllerAs: 'blog',
+                title: 'Blog'
             })
             .otherwise({
                 redirectTo: '/'
             });
-    });
+    })
+    .run(['$rootScope', function($rootScope) {
+        $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+            $rootScope.title = current.$$route.title;
+        });
+    }]);
