@@ -22,7 +22,7 @@ body {
     font-size: 1em;
     line-height: 1.6;
     -webkit-text-size-adjust: none;
-    padding-bottom: 5%;
+    padding-bottom: 15%;
 }
 
 a {
@@ -271,7 +271,7 @@ p {
 }
 
 body {
-    color: #096;
+    color: #ecf0f1;
     background: #2E363A;
 }
 

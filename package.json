@@ -37,5 +37,6 @@
   "scripts": {
     "test": "grunt test"
   },
-  "version": null
+  "version": null,
+  "dependencies": {}
 }
