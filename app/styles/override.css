@@ -1,4 +1,4 @@
-@media (min-width: 979px) {
+@media (min-width: 600px) {
     ul.nav li.dropup:hover > ul.dropdown-menu {
         display: block;
     }
@@ -12,6 +12,7 @@
         position: fixed;
         font-size: 25px;
         line-height: 1.5em;
+        color: #009966;
     }
 }
 

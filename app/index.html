@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="raghuveer">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
@@ -7,7 +7,7 @@
     <meta name="keywords" content="raghuveer, phull, portfolio">
     <meta name="author" content="Raghuveer">
 
-    <title> raghuveer.us</title>
+    <title ng-bind="'&nbsp;raghuveer.us &#124; ' + title"> raghuveer.us</title>
 
     <!-- FONTS -->
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -16,25 +16,26 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
-    <link rel="stylesheet" href="bower_components/ngprogress/ngProgress.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/ngprogress/ngProgress.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" type="text/css" href="styles/fonts/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles/typed.css">
+    <link rel="stylesheet" type="text/css" href="styles/theme.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="stylesheet" type="text/css" href="styles/override.css">
     <!-- endbuild -->
 </head>
-<body ng-app="raghuveer">
+<body>
 <!--[if lte IE 8]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
 <!-- .site-main -->
-<div ng-view id="main" class="container">
+<div ng-view id="main" class="container-fluid">
 
 </div>
 
@@ -55,10 +56,10 @@
             <div class="collapse navbar-collapse navbar-right" id="navigation">
                 <ul class="nav navbar-nav p-r-m">
                     <li ng-class="{ active: isActive('/')}"><a ng-href="#/home"><i class="fa fa-home fa-fw"></i>raghuveer.us</a></li>
-                    <li ng-class="{ active: isActive('/about')}"><a ng-href="#/about"><i class="fa fa-user fa-fw"></i>about me</a></li>
+                    <li ng-class="{ active: isActive('/about')}"><a ng-href="#/about"><i class="fa fa-user fa-fw"></i>about</a></li>
+                    <li ng-class="{ active: isActive('/resume')}"><a ng-href="#/resume"><i class="fa fa-file-pdf-o fa-fw"></i>resume</a></li>
                     <li ng-class="{ active: isActive('/blog')}"><a ng-href="#/blog"><i class="fa fa-file-text fa-fw"></i>blogs</a></li>
                     <li ng-class="{ active: isActive('/contact')}"><a ng-href="#/contact"><i class="fa fa-volume-control-phone fa-fw"></i>contact</a></li>
-                    <li ng-class="{ active: isActive('/resume')}" class="dropup"><a ng-href="#/resume"><i class="fa fa-file-pdf-o fa-fw"></i>resume</a></li>
                 </ul>
             </div>
         </div>
@@ -68,7 +69,7 @@
 </footer>
 
 
-<!-   oogle Analytics: change UA-XXXXX-X to be your site's ID -->
+<!- oogle Analytics: change UA-XXXXX-X to be your site's ID -->
 <script>
     !function (A, n, g, u, l, a, r) {
         A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
@@ -98,10 +99,15 @@
 <!-- endbower -->
 <!-- endbuild -->
 
+<!--google maps api-->
+<script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places"></script>
+<!--end google maps api-->
+
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
 <script src="scripts/controller/main.js"></script>
 <script src="scripts/directives/typedjs.js"></script>
+<script src="scripts/directives/ng-map.min.js"></script>
 <script src="scripts/controller/default.js"></script>
 <script src="scripts/controller/about.js"></script>
 <script src="scripts/controller/blog.js"></script>

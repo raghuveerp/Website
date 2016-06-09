@@ -8,6 +8,6 @@
  * Controller of the websiteApp
  */
 angular.module('raghuveer')
-  .controller('ResumeController', function () {
-
+  .controller('ResumeController', function ($scope) {
+      $scope.input = ['Resume'];
   });

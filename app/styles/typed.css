@@ -4,6 +4,7 @@
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
+    color: #096;
 }
 
 @keyframes blink {
