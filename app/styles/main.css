@@ -133,14 +133,14 @@ a {
 }
 
 a:hover {
-    color: #8ACB82;
+    color: #ecf0f1;
 }
 
 /* Text Selection */
 ::selection {
     text-shadow: none;
     color: #333;
-    background: #FFFFCF;
+    background: #ecf0f1;
 }
 
 ::-moz-selection {
