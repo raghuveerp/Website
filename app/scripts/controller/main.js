@@ -8,7 +8,7 @@
  * Controller of the websiteApp
  */
 angular.module('raghuveer')
-    .controller('MainController', [ '$scope', '$location', function ($scope, $location) {
+    .controller('MainController', [ '$scope', function ($scope) {
         $scope.input =  ['Hello my friend!^2000 My name is Raghuveer.^2500\nCurrently working at Apple,^1500 yeah baby ;-)^2000\n'
             + 'I\'m a tools developer by profession and^2000\n'
             + 'web development believer by heart^500.^500.^500.^2000\n'
