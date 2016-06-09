@@ -146,7 +146,6 @@
     }
 }
 
-
 /* SECTION TITLE */
 .section-title {
     margin: 2em 0 2em;
@@ -453,4 +452,84 @@
     position: relative;
     margin: 1em 0 0.2em 0;
     font-size: 14px;
+}
+
+/* BUTTONS */
+input[type=submit],
+input[type=button],
+button,
+a.button {
+    display: inline-block;
+    position: relative;
+    padding: 1.1em 2em;
+    margin-bottom: .25em;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    border: 0;
+    outline: 0;
+    border: 2px solid #096;
+    color: #096;
+    text-shadow: none;
+    background: none;
+    border-radius: 0;
+}
+
+input[type=submit]:hover,
+input[type=button]:hover,
+button:hover,
+a.button:hover {
+    color: #fff;
+    background-color: #096;
+    border-color: transparent;
+}
+
+input[type=submit]:active,
+input[type=button]:active,
+button:active,
+a.button:active {
+    opacity: .8;
+}
+
+/* Large Buttons */
+input[type=submit].big,
+input[type=button].big,
+button.big,
+a.button.big {
+    font-size: 12px;
+    padding: 1.5em 2.6em;
+}
+
+/* Small Buttons */
+input[type=submit].small,
+input[type=button].small,
+button.small,
+a.button.small {
+    padding: .6em 1.4em;
+    font-size: 11px;
+}
+
+/* Buttons with icons */
+input[type=submit] i,
+input[type=button] i,
+button i,
+a.button i {
+    display: inline;
+    line-height: 1;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: .4em;
+    margin-left: -0.35em;
+    margin-bottom: -1em;
+    vertical-align: middle;
+}
+
+input[type=submit].big i,
+input[type=button].big i,
+button.big i,
+a.button.big i {
+    top: .7em;
+    left: 1.2em;
+    font-size: 18px;
 }

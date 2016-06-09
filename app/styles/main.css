@@ -170,6 +170,10 @@ a:hover {
     text-align: center;
 }
 
+.center {
+    text-align: center;
+}
+
 .middle {
     position: absolute;
     top: 30%;
