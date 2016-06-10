@@ -192,3 +192,6 @@ a:hover {
     max-width: 90%;
 }
 
+.progress {
+    overflow: inherit;
+}

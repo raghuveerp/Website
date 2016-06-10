@@ -69,10 +69,10 @@
                     </div>
                     <!-- section-title -->
                     <!-- .skill-unit -->
-                    <div class="skill-unit">
-                        <h4>HTML5</h4>
-                        <div class="bar" data-percent="80">
-                            <div class="progress"></div>
+                    <div class="skill-unit" ng-repeat="(key, value) in skills">
+                        <h4>{{key}}</h4>
+                        <div class="bar">
+                            <div class="progress" style="width: {{value}}%;"><span>{{value}}</span></div>
                         </div>
                     </div>
                     <!-- .skill-unit -->
