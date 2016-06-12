@@ -169,6 +169,10 @@ a:hover {
     padding-bottom: 75px;
 }
 
+.p-t-l {
+    padding-top: 20px;
+}
+
 .fa-fw {
     width: 1.75em;
     text-align: center;
