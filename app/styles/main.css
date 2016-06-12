@@ -174,14 +174,6 @@ a:hover {
     text-align: center;
 }
 
-.middle {
-    position: absolute;
-    top: 30%;
-    left: 42%;
-    transform: translate(-50%, -50%);
-    min-width: 250px;
-}
-
 .greentext {
     color: #009966;
 }
@@ -196,6 +188,11 @@ a:hover {
     overflow: inherit;
 }
 
+.middle {
+    position: absolute;
+    top: 25%;
+}
+
 .introduction {
     padding: 10px;
     display: block;
@@ -203,6 +200,6 @@ a:hover {
     max-width: 100%;
     line-height: 1.25em;
     position: fixed;
-    font-size: 25px;
+    font-size: calc(12px + 1vw);
     line-height: 1.5em;
 }
