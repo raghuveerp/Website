@@ -16,7 +16,7 @@ angular.module('raghuveer')
                 var percent = bar.attr('data-percent');
                 bar.find('.progress').css('width', percent + '%').html('<span>' + percent + '</span>');
             });
-        }
+        };
 
         $timeout(fillBars, 500);
     });
