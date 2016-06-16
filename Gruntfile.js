@@ -261,12 +261,6 @@ module.exports = function (grunt) {
         // to use the Usemin blocks.
         cssmin: {
             dist: {
-                // files: {
-                //   '<%= yeoman.dist %>/styles/*.css': [
-                //     '.tmp/styles/{,*/}*.css'
-                //   ]
-                // }
-
                 files: [{
                     expand: true,
                     src: '**/*.css',
@@ -277,14 +271,6 @@ module.exports = function (grunt) {
             }
         },
         uglify: {
-            // dist: {
-            //   files: {
-            //     '<%= yeoman.dist %>/scripts/*/*.js': [
-            //       '<%= yeoman.dist %>/scripts/scripts.js'
-            //     ]
-            //   }
-            // }
-
             dist: {
                 files: [{
                     expand: true,
@@ -305,7 +291,7 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: '<%= yeoman.app %>/images',
                     src: '{,*/}*.{png,jpg,jpeg,gif}',
-                    dest: '<%= yeoman.dist %>/images'
+                    dest: 'dist/images'
                 }]
             }
         },
@@ -332,7 +318,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= yeoman.dist %>',
-                    src: ['*/*.html'],
+                    src: ['*/*.html', 'view/**/*.html'],
                     dest: '<%= yeoman.dist %>'
                 }]
             }
@@ -346,7 +332,7 @@ module.exports = function (grunt) {
                     usemin: 'scripts/scripts.js'
                 },
                 cwd: '<%= yeoman.app %>',
-                src: 'views/{,*/}*.html',
+                src: 'view/**/*.html',
                 dest: '.tmp/templateCache.js'
             }
         },
@@ -430,6 +416,8 @@ module.exports = function (grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-angular-templates');
+
     grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
         if (target === 'dist') {
             return grunt.task.run(['build', 'connect:dist:keepalive']);
@@ -483,3 +471,4 @@ module.exports = function (grunt) {
         'build'
     ]);
 };
+

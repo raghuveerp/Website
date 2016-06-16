@@ -40,7 +40,6 @@ angular.module('raghuveer')
             });
 
             $scope.checked = checked;
-            console.log('interval should hit this');
         };
 
         randomize();
