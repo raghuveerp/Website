@@ -8,6 +8,6 @@
  * Controller of the websiteApp
  */
 angular.module('raghuveer')
-  .controller('AboutController', function () {
+    .controller('AboutController', function () {
 
-  });
+    });
