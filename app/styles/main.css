@@ -211,3 +211,15 @@ a:hover {
     font-size: calc(12px + 1vw);
     line-height: 1.5em;
 }
+
+.reachme {
+    padding: 0;
+    margin: 2em 4em;
+    list-style: none;
+    text-align: left;
+}
+
+.reachme li {
+    display: block;
+    padding: 10px;
+}
