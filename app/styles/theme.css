@@ -696,3 +696,34 @@ a.button.big i {
 .social li a.vkontakte:hover {
     background-color: #6383A8;
 }
+
+/* CONTACT FORM */
+.contact-form {
+    margin: 1.6em auto 3em auto;
+    max-width: 600px;
+    overflow: auto;
+}
+
+.contact-form p {
+    margin: 0 0 1.8em 0;
+}
+
+.contact-form p:last-child {
+    text-align: center;
+}
+
+.contact-form input:not([type=submit]):not([type=button]):not([type=file]):not([type=radio]):not([type=checkbox]),
+.contact-form textarea {
+    width: 100%;
+    max-width: none;
+    display: block;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.contact-form .antispam {
+    display: none;
+}
