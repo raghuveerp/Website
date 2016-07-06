@@ -696,3 +696,61 @@ a.button.big i {
 .social li a.vkontakte:hover {
     background-color: #6383A8;
 }
+
+/* CONTACT FORM */
+.contact-form {
+    margin: 1.6em auto 3em auto;
+    max-width: 600px;
+    overflow: auto;
+}
+
+.contact-form p {
+    margin: 0 0 1.8em 0;
+}
+
+.contact-form p:last-child {
+    text-align: center;
+}
+
+.contact-form input:not([type=submit]):not([type=button]):not([type=file]):not([type=radio]):not([type=checkbox]),
+.contact-form textarea {
+    width: 100%;
+    max-width: none;
+    display: block;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.contact-form .antispam {
+    display: none;
+}
+
+/* validation  */
+label.error {
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+    min-width: 160px;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: .2em .8em;
+    background-color: #E24C4C;
+    color: #fff;
+    letter-spacing: 0;
+}
+
+label.error:after {
+    content: " ";
+    position: absolute;
+    left: 1.6em;
+    bottom: 100%;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid #E24C4C;
+    border-right: 8px solid transparent;
+}
