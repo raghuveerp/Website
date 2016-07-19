@@ -10,15 +10,11 @@
  */
 angular
     .module('raghuveer', [
-        'ngAnimate',
-        'ngAria',
-        'ngCookies',
-        'ngResource',
         'ngRoute',
-        'ngSanitize',
         'ngTouch',
         'ngMap',
-        'underscore'
+        'underscore',
+        'ui.bootstrap'
     ])
     .config(function ($routeProvider) {
         $routeProvider
