@@ -704,7 +704,7 @@ a.button.big i {
 /* CONTACT FORM */
 .contact-form {
     margin: 1.6em auto 3em auto;
-    max-width: 600px;
+    max-width: 700px;
     overflow: auto;
 }
 
@@ -725,7 +725,7 @@ a.button.big i {
 }
 
 .contact-form textarea {
-    height: 100px;
+    height: 150px;
 }
 
 .contact-form .antispam {

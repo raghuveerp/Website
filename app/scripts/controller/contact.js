@@ -8,7 +8,7 @@
  * Controller of the websiteApp
  */
 angular.module('raghuveer')
-    .controller('ContactController', function ($scope, $uibModal) {
+    .controller('ContactController', function ($scope, $uibModal, $log) {
         $scope.animationsEnabled = true;
 
         $scope.openModal = function () {

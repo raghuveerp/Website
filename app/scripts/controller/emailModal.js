@@ -13,6 +13,13 @@
  * Controller of the websiteApp
  */
 angular.module('raghuveer')
-    .controller('EmailModalController', function () {
+    .controller('EmailModalController', function ($scope, $uibModalInstance) {
+        $scope.send = function () {
+            $uibModalInstance.close($scope);
+        };
+
+        $scope.cancel = function () {
+            $uibModalInstance.dismiss('cancel');
+        };
 
     });
