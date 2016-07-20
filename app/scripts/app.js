@@ -12,6 +12,7 @@ angular
     .module('raghuveer', [
         'ngRoute',
         'ngTouch',
+        'ngAnimate',
         'ngMap',
         'underscore',
         'ui.bootstrap'

@@ -8,6 +8,22 @@
  * Controller of the websiteApp
  */
 angular.module('raghuveer')
-  .controller('ContactController', function () {
+    .controller('ContactController', function ($scope, $uibModal) {
+        $scope.animationsEnabled = true;
 
-  });
+        $scope.openModal = function () {
+
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'view/emailModal.html',
+                controller: 'EmailModalController',
+                size: 'lg'
+            });
+
+            modalInstance.result.then(function (selectedItem) {
+                $scope.selected = selectedItem;
+            }, function () {
+                $log.info('Modal dismissed at: ' + new Date());
+            });
+        };
+    });
