@@ -455,6 +455,26 @@
     font-size: 14px;
 }
 
+/* BLOGS */
+.blogs {
+    position: relative;
+    padding: 1.4em 1.8em;
+    margin: 2em 0;
+    border-radius: 8px;
+    border: 1px solid #009966;
+    height: 200px;
+}
+
+/*.blogs input[type=button] {*/
+    /*display: none;*/
+/*}*/
+
+.blogs p {
+    position: relative;
+    margin: 1em 0 0.2em 0;
+    font-size: 15px;
+}
+
 /* BUTTONS */
 input[type=submit],
 input[type=button],
