@@ -465,15 +465,6 @@
     height: 200px;
 }
 
-/*.blogs input[type=button] {*/
-    /*display: none;*/
-/*}*/
-
-.blogs p {
-    position: relative;
-    margin: 1em 0 0.2em 0;
-    font-size: 15px;
-}
 
 /* BUTTONS */
 input[type=submit],
