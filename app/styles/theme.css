@@ -465,7 +465,6 @@
     height: 200px;
 }
 
-
 /* BUTTONS */
 input[type=submit],
 input[type=button],
@@ -768,4 +767,47 @@ label.error:after {
     height: 0;
     border-bottom: 8px solid #E24C4C;
     border-right: 8px solid transparent;
+}
+
+/* TOGGLES */
+.toggle-group {
+    margin-bottom: 2em;
+}
+
+.toggle h3 {
+    position: relative;
+    font-size: 13px;
+    font-weight: 600;
+    border-left: 0;
+    padding: .9em 1em .6em 1.8em;
+    margin: 0;
+    cursor: pointer;
+    border-bottom: 1px solid #F4F3EF;
+}
+
+.toggle h3.active {
+    border-bottom: 0;
+}
+
+.toggle h3:before {
+    content: "\f067";
+    opacity: .6;
+    position: absolute;
+    top: 1em;
+    left: 0;
+    font-size: 12px;
+    line-height: 1;
+    font-family: FontAwesome;
+
+}
+
+.toggle h3.active:before {
+    content: '\f068';
+}
+
+.toggle .toggle-content {
+    display: none;
+    padding: 1.2em 0 2em 1.8em;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
 }
