@@ -15,7 +15,8 @@ angular
         'ngAnimate',
         'ngMap',
         'underscore',
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'raghuveer.blogs'
     ])
     .config(function ($routeProvider) {
         $routeProvider

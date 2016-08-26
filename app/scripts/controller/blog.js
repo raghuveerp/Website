@@ -7,7 +7,10 @@
  * # AboutCtrl
  * Controller of the websiteApp
  */
-angular.module('raghuveer')
+angular.module('raghuveer.blogs', ['raghuveer', 'ui.router'])
+    .config(function () {
+        
+    })
     .controller('BlogController', function ($scope) {
         var accordian = function () {
 
