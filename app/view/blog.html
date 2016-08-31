@@ -4,49 +4,123 @@
             <h1 class="page-title greentext p-b-m">blogs</h1>
             <div class="row">
                 <!-- .accordion -->
-                <div class="toggle-group accordion">
-                    <!-- .toggle -->
-                    <div class="toggle">
-                        <h3>
-                            Startup Your First Project
-                            <span class="pull-right">
-                                <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com"
-                                   target="_blank"
-                                   class="p-r-m">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                                
-                                <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons"
-                                   target="_blank"
-                                   class="p-r-m">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                                
-                                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com"
-                                   target="_blank"
-                                   class="p-r-m">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                                
-                                <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com"
-                                   class="p-r-m">
-                                    <i class="fa fa-envelope"></i>
-                                </a>
-                            </span>
-                        </h3>
-                        <div class="toggle-content">
-                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-                        </div>
-                    </div>
-                    <!-- .toggle -->
-                    <!-- .toggle -->
-                    <div class="toggle">
-                        <h3>Build on Something Solid</h3>
-                        <div class="toggle-content">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</div>
-                    </div>
-                    <!-- .toggle -->
-                </div>
+                <!--<div class="toggle-group accordion">-->
+                <!--&lt;!&ndash; .toggle &ndash;&gt;-->
+                <!--<div class="toggle" ng-repeat="option in options">-->
+                <!--<h3>-->
+                <!--something something-->
+                <!--<span class="pull-right">-->
+                <!--<a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com"-->
+                <!--target="_blank"-->
+                <!--class="facebook p-r-m">-->
+                <!--<i class="fa fa-facebook"></i>-->
+                <!--</a>-->
+                <!---->
+                <!--<a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons"-->
+                <!--target="_blank"-->
+                <!--class="p-r-m">-->
+                <!--<i class="fa fa-twitter"></i>-->
+                <!--</a>-->
+                <!---->
+                <!--<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com"-->
+                <!--target="_blank"-->
+                <!--class="p-r-m">-->
+                <!--<i class="fa fa-linkedin"></i>-->
+                <!--</a>-->
+                <!---->
+                <!--<a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com"-->
+                <!--class="p-r-m">-->
+                <!--<i class="fa fa-envelope"></i>-->
+                <!--</a>-->
+                <!--</span>-->
+                <!--</h3>-->
+                <!--<div class="toggle-content">-->
+                <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eligendi magnam nobis non recusandae repellat. Architecto, commodi consequuntur dolores eligendi eos facere incidunt iure tempora? Earum est laudantium ratione reprehenderit.-->
+                <!---->
+                <!--<a ng-href="#/blogs/{{option.keyword}}" class="button small pull-right p-b-m">-->
+                <!--<i class="fa fa-external-link fa-fw"></i>Read More</a>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; .toggle &ndash;&gt;-->
+                <!--</div>-->
                 <!-- .accordion -->
+                
+                <!--<div ng-controller="AccordionDemoCtrl">-->
+                <!---->
+                <!---->
+                <!--<accordion>-->
+                <!--<accordion-group heading="{{group.title}}" ng-repeat="group in groups">-->
+                <!--<ul>-->
+                <!--<li ng-repeat="item in group.items">{{item['item-title']}}</li>-->
+                <!--</ul>-->
+                <!--</accordion-group>-->
+                <!--</accordion>-->
+                <!--</div>-->
+                <!---->
+                
+                <div ng-controller="AccordionDemoCtrl">
+                    <!--<script type="text/ng-template" id="group-template.html">-->
+                    <!--<div class="panel panel-default">-->
+                    <!--<div class="panel-heading">-->
+                    <!--<h4 class="panel-title" style="color:#fa39c3">-->
+                    <!--<a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">-->
+                    <!--<span uib-accordion-header ng-class="{'text-muted': isDisabled}">-->
+                    <!--{{heading}}-->
+                    <!--</span>-->
+                    <!--</a>-->
+                    <!--</h4>-->
+                    <!--</div>-->
+                    <!--<div class="panel-collapse collapse" uib-collapse="!isOpen">-->
+                    <!--<div class="panel-body" style="text-align: right" ng-transclude></div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</script>-->
+                    
+                    <!--<p>-->
+                    <!--<button type="button"-->
+                    <!--class="btn btn-default btn-sm"-->
+                    <!--ng-click="status.open = !status.open">Toggle last panel-->
+                    <!--</button>-->
+                    <!--<button type="button"-->
+                    <!--class="btn btn-default btn-sm"-->
+                    <!--ng-click="status.isFirstDisabled = ! status.isFirstDisabled">Enable / Disable first panel-->
+                    <!--</button>-->
+                    <!--</p>-->
+                    
+                    <!--<div class="checkbox">-->
+                    <!--<label>-->
+                    <!--<input type="checkbox" ng-model="oneAtATime">-->
+                    <!--Open only one at a time-->
+                    <!--</label>-->
+                    <!--</div>-->
+                    
+                    <uib-accordion close-others="oneAtATime">
+                        <div uib-accordion-group class="toggle-group" heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+                            This content is straight in the template.
+                        </div>
+                        <div uib-accordion-group class="panel-default" heading="{{group.title}}" ng-repeat="group in groups">
+                            {{group.content}}
+                        </div>
+                        <div uib-accordion-group class="panel-default" heading="Dynamic Body Content">
+                            <p>The body of the uib-accordion group grows to fit the contents</p>
+                            <button type="button" class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
+                            <div ng-repeat="item in items">{{item}}</div>
+                        </div>
+                        
+                        <div uib-accordion-group class="panel-danger" heading="Delete account">
+                            <p>Please, to delete your account, click the button below</p>
+                            <button class="btn btn-danger">Delete</button>
+                        </div>
+                        <div uib-accordion-group class="panel-default" is-open="status.open">
+                            <uib-accordion-heading>
+                                I can have markup, too! <i class="pull-right glyphicon"
+                                                           ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                            </uib-accordion-heading>
+                            This is just some content to illustrate fancy headings.
+                        </div>
+                    </uib-accordion>
+                </div>
+            
             </div>
         </div>
     </div>

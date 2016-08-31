@@ -11,13 +11,18 @@
     
     <!-- FONTS -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic'
+          rel='stylesheet'
+          type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+          rel="stylesheet"
+          integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1"
+          crossorigin="anonymous">
     
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -27,90 +32,96 @@
     <!-- endbuild -->
 </head>
 <body>
-<!--[if lte IE 8]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
-
-<!-- .site-main -->
-<div ng-view id="main" class="container-fluid">
-
-</div>
-
-<footer ng-controller="defaultController">
-    <!-- NAV MENU -->
-    <nav id="primary-navigation" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <p class="navbar-text pull-left p-l-m">&copy; {{date}} Raghuveer Phull</p>
-                
-                <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navigation" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse navbar-right" id="navigation">
-                <ul class="nav navbar-nav p-r-m">
-                    <li ng-class="{ active: isActive('/')}"><a ng-href="#/home"><i class="fa fa-home fa-fw"></i>home</a></li>
-                    <li ng-class="{ active: isActive('/about')}"><a ng-href="#/about"><i class="fa fa-user fa-fw"></i>about</a></li>
-                    <li ng-class="{ active: isActive('/blog')}"><a ng-href="#/blog"><i class="fa fa-file-text fa-fw"></i>blogs</a></li>
-                    <li ng-class="{ active: isActive('/resume')}"><a ng-href="#/resume"><i class="fa fa-file-pdf-o fa-fw"></i>resume</a></li>
-                    <li ng-class="{ active: isActive('/contact')}"><a ng-href="#/contact"><i class="fa fa-volume-control-phone fa-fw"></i>contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!--[if lte IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> to improve your experience.
+    </p>
+    <![endif]-->
     
-    <!-- NAV MENU -->
-</footer>
-
-
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-<script>
-    !function (A, n, g, u, l, a, r) {
-        A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
-                (A[l].q = A[l].q || []).push(arguments)
-            }, A[l].l = +new Date, a = n.createElement(g),
-            r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
-    }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    <!-- .site-main -->
+    <div ng-view id="main" class="container-fluid">
     
-    ga('create', 'UA-XXXXX-X');
-    ga('send', 'pageview');
-</script>
-
-<!-- build:js(.) scripts/vendor.js -->
-<!-- bower:js -->
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="bower_components/angular-touch/angular-touch.js"></script>
-<script src="bower_components/angular-animate/angular-animate.js"></script>
-<script src="bower_components/typed.js/dist/typed.min.js"></script>
-<script src="bower_components/underscore/underscore.js"></script>
-<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-<!-- endbower -->
-<!-- endbuild -->
-
-<!--google maps api-->
-<script async defer src="https://maps.google.com/maps/api/js?key=AIzaSyCnLtgfke3b6LNIzn80aWsjY7KBGctSM7E&libraries=places,visualization,drawing,geometry,places"></script>
-<!--end google maps api-->
-
-<!-- build:js({.tmp,app}) scripts/scripts.js -->
-<script src="modules/underscore.js"></script>
-<script src="scripts/app.js"></script>
-<script src="scripts/controller/main.js"></script>
-<script src="scripts/directives/typedjs.js"></script>
-<script src="scripts/directives/ng-map.min.js"></script>
-<script src="scripts/controller/default.js"></script>
-<script src="scripts/controller/about.js"></script>
-<script src="scripts/controller/blog.js"></script>
-<script src="scripts/controller/contact.js"></script>
-<script src="scripts/controller/emailModal.js"></script>
-<script src="scripts/controller/resume.js"></script>
-<!-- endbuild -->
+    </div>
+    
+    <footer ng-controller="defaultController">
+        <!-- NAV MENU -->
+        <nav id="primary-navigation" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <p class="navbar-text pull-left p-l-m">&copy; {{date}} Raghuveer Phull</p>
+                    
+                    <button type="button"
+                            class="navbar-toggle collapsed pull-right"
+                            data-toggle="collapse"
+                            data-target="#navigation"
+                            aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse navbar-right" id="navigation">
+                    <ul class="nav navbar-nav p-r-m">
+                        <li ng-class="{ active: isActive('/')}"><a ng-href="#/home"><i class="fa fa-home fa-fw"></i>home</a></li>
+                        <li ng-class="{ active: isActive('/about')}"><a ng-href="#/about"><i class="fa fa-user fa-fw"></i>about</a></li>
+                        <li ng-class="{ active: isActive('/blog') || isActive('/blogs')}"><a ng-href="#/blog"><i class="fa fa-file-text fa-fw"></i>blogs</a></li>
+                        <li ng-class="{ active: isActive('/resume')}"><a ng-href="#/resume"><i class="fa fa-file-pdf-o fa-fw"></i>resume</a></li>
+                        <li ng-class="{ active: isActive('/contact')}"><a ng-href="#/contact"><i class="fa fa-volume-control-phone fa-fw"></i>contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- NAV MENU -->
+    </footer>
+    
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+        !function (A, n, g, u, l, a, r) {
+            A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+                    (A[l].q = A[l].q || []).push(arguments)
+                }, A[l].l = +new Date, a = n.createElement(g),
+                r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+        }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
+    </script>
+    
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/typed.js/dist/typed.min.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!--google maps api-->
+    <script async
+            defer
+            src="https://maps.google.com/maps/api/js?key=AIzaSyCnLtgfke3b6LNIzn80aWsjY7KBGctSM7E&libraries=places,visualization,drawing,geometry,places"></script>
+    <!--end google maps api-->
+    
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="modules/underscore.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controller/main.js"></script>
+    <script src="scripts/directives/typedjs.js"></script>
+    <script src="scripts/directives/ng-map.min.js"></script>
+    <script src="scripts/controller/default.js"></script>
+    <script src="scripts/controller/about.js"></script>
+    <script src="scripts/controller/blog.js"></script>
+    <script src="scripts/controller/contact.js"></script>
+    <script src="scripts/controller/emailModal.js"></script>
+    <script src="scripts/controller/resume.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
