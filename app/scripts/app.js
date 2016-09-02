@@ -29,7 +29,7 @@ angular
                 templateUrl: 'view/about.html',
                 controller: 'AboutController',
                 controllerAs: 'about',
-                title : 'About Me'
+                title: 'About Me'
             })
             .when('/resume', {
                 templateUrl: 'view/resume.html',
@@ -41,10 +41,18 @@ angular
                 templateUrl: 'view/contact.html',
                 controller: 'ContactController',
                 controllerAs: 'contact',
-                title : 'Contact Me'
+                title: 'Contact Me'
             })
             .when('/blog', {
                 templateUrl: 'view/blog.html',
+                controller: 'BlogController',
+                controllerAs: 'blog',
+                title: 'Blog'
+            })
+            .when('/blogs/:keyword', {
+                templateUrl: function (urlAttribute) {
+                    return 'view/blogs/' + urlAttribute.keyword + '.html'
+                },
                 controller: 'BlogController',
                 controllerAs: 'blog',
                 title: 'Blog'
@@ -53,7 +61,7 @@ angular
                 redirectTo: '/'
             });
     })
-    .run(['$rootScope', function($rootScope) {
+    .run(['$rootScope', function ($rootScope) {
         $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
             $rootScope.title = current.$$route.title;
         });

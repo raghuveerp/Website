@@ -9,32 +9,19 @@
  */
 angular.module('raghuveer')
     .controller('BlogController', function ($scope) {
-        var accordian = function () {
+        $scope.oneAtATime = true;
 
-            var toggleSpeed = 300;
-            $('.toggle h3.active + .toggle-content').show();
+        $scope.blogs = [
+            {
+                title: 'Blog Heading',
+                content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam commodi cupiditate dolores nam quos temporibus, vitae?',
+                keyword: 'blog1'
+            },
+            {
+                title: 'Another Blog Heading',
+                content: 'Commodi facere odit perspiciatis ratione, reiciendis suscipit voluptas. Atque labore natus veritatis voluptatum!',
+                keyword: 'blog1'
+            }
+        ];
 
-            $('.toggle h3 span').on("click", function (event) {
-                event.stopPropagation();
-            });
-
-            $('.toggle h3').on("click", function () {
-                if ($(this).hasClass('active')) {
-                    $(this).removeClass('active');
-                    $(this).next('.toggle-content').stop(true, true).slideUp(toggleSpeed);
-                } else {
-                    $(this).addClass('active');
-                    $(this).next('.toggle-content').stop(true, true).slideDown(toggleSpeed);
-
-                    //accordion
-                    if ($(this).parents('.toggle-group').hasClass('accordion')) {
-                        $(this).parent().siblings().find('h3').removeClass('active');
-                        $(this).parent().siblings().find('.toggle-content').stop(true, true).slideUp(toggleSpeed);
-                    }
-                }
-                return false;
-            });
-        }
-
-        accordian();
     });

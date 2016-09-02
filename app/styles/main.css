@@ -136,6 +136,10 @@ a:hover {
     color: #ecf0f1;
 }
 
+a:focus {
+    color: #009966;
+}
+
 /* Text Selection */
 ::selection {
     text-shadow: none;
@@ -146,7 +150,7 @@ a:hover {
 ::-moz-selection {
     text-shadow: none;
     color: #333;
-    background: #FFFFCF;
+    background: #ecf0f1;
 }
 
 .p-r-m {
@@ -231,11 +235,18 @@ a:hover {
     padding: 10px;
 }
 
-
 .modal-content {
     background-color: #2E363A;
 }
 
 .t-a-j {
     text-align: justify;
+}
+
+.panel {
+    background-color: inherit;
+}
+
+.panel-default {
+    border-color: #2E363A;
 }
