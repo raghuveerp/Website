@@ -781,6 +781,10 @@ label.error:after {
     border-bottom: 1px solid #F4F3EF;
 }
 
+.toggle-social {
+    font-size: smaller;
+}
+
 .toggle-content {
     border-bottom: 1px solid #eee;
     font-size: 13px;
@@ -788,6 +792,5 @@ label.error:after {
     margin-top: 20px;
     padding-bottom: 25px;
     transition: width -.1s;
-
 }
 

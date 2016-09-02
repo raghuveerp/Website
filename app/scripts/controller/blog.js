@@ -8,8 +8,11 @@
  * Controller of the websiteApp
  */
 angular.module('raghuveer')
-    .controller('BlogController', function ($scope) {
+    .controller('BlogController', function ($scope, $location) {
         $scope.oneAtATime = true;
+
+        $scope.blogsBaseURL = $location.$$absUrl;
+        console.log($scope.blogsBaseURL);
 
         $scope.blogs = [
             {
