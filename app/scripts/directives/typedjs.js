@@ -10,8 +10,8 @@ angular.module('raghuveer')
             link: function ($scope, $element, $attrs) {
                 var options = $scope.options || {
                         strings: $scope.strings,
-                        typeSpeed: 50,
-                        backDelay: 200,
+                        typeSpeed: 25,
+                        backDelay: 100,
                         contentType: "text",
                         showCursor: true,
                         loop: false,

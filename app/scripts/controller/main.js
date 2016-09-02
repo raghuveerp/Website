@@ -9,9 +9,9 @@
  */
 angular.module('raghuveer')
     .controller('MainController', function ($scope) {
-        $scope.input =  ['Hello my friend!^2000 My name is Raghuveer.^2500\nCurrently working at Apple,^1500 yeah baby ;-)^2000\n'
-            + 'I\'m a tools developer by profession and^2000\n'
-            + 'believes in web development at heart^500.^500.^500.^2000\n'
-            + 'Food is my love,^2000 scotch is my weakness,^2000\nlistening music makes me happy^2000 and ^2000\n'
-            + 'exploring new places gives me pleasure.^2000'];
+        $scope.input =  ['Hello my friend!^1000 My name is Raghuveer.^1500\nCurrently working at Apple,^1000 yeah baby ;-)^1000\n'
+            + 'I\'m a tools developer by profession and^1000\n'
+            + 'believes in web development at heart^200.^200.^200.^1000\n'
+            + 'Food is my love,^1000 scotch is my weakness,^1000\nlistening music makes me happy^1000 and ^1000\n'
+            + 'exploring new places gives me pleasure.^1000'];
     });
