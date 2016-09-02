@@ -3,24 +3,22 @@
         <div class="layout-medium">
             <h1 class="page-title greentext p-b-m">blogs</h1>
             <div class="row">
-                
-                <!--Working Accordion-->
                 <script type="text/ng-template" id="blogs-template.html">
                     <div class="toggle-group">
                         <div class="toggle">
                             <h3 ng-click="toggleOpen()">
-                                
+                                <i class="greentext fa fa-fw" ng-class="{'fa-plus' : !isOpen, 'fa-minus': isOpen}"></i>
                                 <a href tabindex="0" class="accordion-toggle" uib-accordion-transclude="heading">
                                     <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
                                         {{heading}}
                                     </span>
                                 </a>
-    
+                                
                                 <span class="toggle-social pull-right">
-                                <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank" class="facebook p-r-m">
+                                <a ng-href="http://www.facebook.com/sharer.php?u={{blogsBaseURL}}" target="_blank" class="facebook p-r-m">
                                     <i class="fa fa-facebook"></i>
                                 </a>
-                                <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank" class="p-r-m">
+                                <a ng-href="https://twitter.com/share?url={{blogsBaseURL}}&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank" class="p-r-m">
                                     <i class="fa fa-twitter"></i>
                                 </a>
                                 <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank" class="p-r-m">
@@ -31,20 +29,21 @@
                                 </a>
                             </span>
                             </h3>
-                            
+                        
                         </div>
                         
                         <div uib-collapse="!isOpen" ng-transclude class="toggle-content"></div>
                     </div>
                 </script>
-                
                 <uib-accordion close-others="oneAtATime">
                     <div uib-accordion-group class="panel-default" heading={{blog.title}} template-url="blogs-template.html" ng-repeat="blog in blogs">
                         {{blog.content}}
-                    
+                        <span class="p-l-m">
+                        <a ng-href="#/blog/{{blog.keyword}}" class="button small p-l-m">
+                        <i class="fa fa-external-link fa-fw"></i>Read More</a>
+                        </span>
                     </div>
                 </uib-accordion>
-            
             </div>
         </div>
     </div>
