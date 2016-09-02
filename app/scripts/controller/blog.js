@@ -11,28 +11,17 @@ angular.module('raghuveer')
     .controller('BlogController', function ($scope) {
         $scope.oneAtATime = true;
 
-        $scope.groups = [
+        $scope.blogs = [
             {
-                title: 'Heading 1',
-                content: 'Dynamic Group Body - 1'
+                title: 'Blog Heading',
+                content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam commodi cupiditate dolores nam quos temporibus, vitae?',
+                keyword: 'blog1'
             },
             {
-                title: 'Dynamic Group Header',
-                content: 'Dynamic Group Body - 2'
+                title: 'Another Blog Heading',
+                content: 'Commodi facere odit perspiciatis ratione, reiciendis suscipit voluptas. Atque labore natus veritatis voluptatum!',
+                keyword: 'blog1'
             }
         ];
-
-        $scope.items = ['Item 1', 'Item 2', 'Item 3'];
-
-        $scope.addItem = function () {
-            var newItemNo = $scope.items.length + 1;
-            $scope.items.push('Item ' + newItemNo);
-        };
-
-        $scope.status = {
-            isCustomHeaderOpen: false,
-            isFirstOpen: true,
-            isFirstDisabled: false
-        };
 
     });
