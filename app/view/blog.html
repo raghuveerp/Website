@@ -3,86 +3,47 @@
         <div class="layout-medium">
             <h1 class="page-title greentext p-b-m">blogs</h1>
             <div class="row">
-                <!-- .accordion -->
-                <!--<div class="toggle-group accordion">-->
-                <!--&lt;!&ndash; .toggle &ndash;&gt;-->
-                <!--<div class="toggle" ng-repeat="option in options">-->
-                <!--<h3>-->
-                <!--something something-->
-                <!--<span class="pull-right">-->
-                <!--<a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com"-->
-                <!--target="_blank"-->
-                <!--class="facebook p-r-m">-->
-                <!--<i class="fa fa-facebook"></i>-->
-                <!--</a>-->
-                <!---->
-                <!--<a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons"-->
-                <!--target="_blank"-->
-                <!--class="p-r-m">-->
-                <!--<i class="fa fa-twitter"></i>-->
-                <!--</a>-->
-                <!---->
-                <!--<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com"-->
-                <!--target="_blank"-->
-                <!--class="p-r-m">-->
-                <!--<i class="fa fa-linkedin"></i>-->
-                <!--</a>-->
-                <!---->
-                <!--<a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com"-->
-                <!--class="p-r-m">-->
-                <!--<i class="fa fa-envelope"></i>-->
-                <!--</a>-->
-                <!--</span>-->
-                <!--</h3>-->
-                <!--<div class="toggle-content">-->
-                <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eligendi magnam nobis non recusandae repellat. Architecto, commodi consequuntur dolores eligendi eos facere incidunt iure tempora? Earum est laudantium ratione reprehenderit.-->
-                <!---->
-                <!--<a ng-href="#/blogs/{{option.keyword}}" class="button small pull-right p-b-m">-->
-                <!--<i class="fa fa-external-link fa-fw"></i>Read More</a>-->
-                <!--</div>-->
-                <!--</div>-->
-                <!--&lt;!&ndash; .toggle &ndash;&gt;-->
-                <!--</div>-->
-                <!-- .accordion -->
-                
-                <!--<div ng-controller="AccordionDemoCtrl">-->
-                <!---->
-                <!---->
-                <!--<accordion>-->
-                <!--<accordion-group heading="{{group.title}}" ng-repeat="group in groups">-->
-                <!--<ul>-->
-                <!--<li ng-repeat="item in group.items">{{item['item-title']}}</li>-->
-                <!--</ul>-->
-                <!--</accordion-group>-->
-                <!--</accordion>-->
-                <!--</div>-->
-                <!---->
-                
-                
-                    <script type="text/ng-template" id="blogs-template.html">
-                        <div class="toggle-group">
-                            <div class="toggle">
-                                <h3 ng-click="toggleOpen()">
-                                    <a href tabindex="0" class="accordion-toggle" uib-accordion-transclude="heading">
-                                        <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
-                                            {{heading}}
-                                        </span>
-                                    </a>
-                                </h3>
-                            </div>
-                            <div uib-collapse="!isOpen" ng-transclude class="toggle-content"></div>
+                <script type="text/ng-template" id="blogs-template.html">
+                    <div class="toggle-group">
+                        <div class="toggle">
+                            <h3 ng-click="toggleOpen()">
+                                <i class="greentext fa fa-fw" ng-class="{'fa-plus' : !isOpen, 'fa-minus': isOpen}"></i>
+                                <a href tabindex="0" class="accordion-toggle" uib-accordion-transclude="heading">
+                                    <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
+                                        {{heading}}
+                                    </span>
+                                </a>
+                                
+                                <span class="toggle-social pull-right">
+                                <a ng-href="http://www.facebook.com/sharer.php?u={{blogsBaseURL}}" target="_blank" class="facebook p-r-m">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a ng-href="https://twitter.com/share?url={{blogsBaseURL}}&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank" class="p-r-m">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank" class="p-r-m">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com" class="p-r-m">
+                                    <i class="fa fa-envelope"></i>
+                                </a>
+                            </span>
+                            </h3>
+                        
                         </div>
-                    </script>
-                    
-                    <uib-accordion close-others="oneAtATime">
-                        <div uib-accordion-group class="panel-default" heading={{blog.title}} template-url="blogs-template.html" ng-repeat="blog in blogs">
-                            {{blog.content}}
-                            
-                             
-                        </div>
-                    </uib-accordion>
-                
-            
+                        
+                        <div uib-collapse="!isOpen" ng-transclude class="toggle-content"></div>
+                    </div>
+                </script>
+                <uib-accordion close-others="oneAtATime">
+                    <div uib-accordion-group class="panel-default" heading={{blog.title}} template-url="blogs-template.html" ng-repeat="blog in blogs">
+                        {{blog.content}}
+                        <span class="p-l-m">
+                        <a ng-href="#/blog/{{blog.keyword}}" class="button small p-l-m">
+                        <i class="fa fa-external-link fa-fw"></i>Read More</a>
+                        </span>
+                    </div>
+                </uib-accordion>
             </div>
         </div>
     </div>

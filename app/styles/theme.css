@@ -775,10 +775,14 @@ label.error:after {
     font-size: 15px;
     font-weight: 600;
     border-left: 0;
-    padding: .9em 1em .6em 1.8em;
+    padding: .9em 1em .6em 0em;
     margin: 0;
     cursor: pointer;
     border-bottom: 1px solid #F4F3EF;
+}
+
+.toggle-social {
+    font-size: smaller;
 }
 
 .toggle-content {
@@ -788,6 +792,5 @@ label.error:after {
     margin-top: 20px;
     padding-bottom: 25px;
     transition: width -.1s;
-
 }
 

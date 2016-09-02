@@ -49,13 +49,14 @@ angular
                 controllerAs: 'blog',
                 title: 'Blog'
             })
-            .when('/blogs/:keyword', {
+            .when('/blog/:keyword', {
                 templateUrl: function (urlAttribute) {
                     return 'view/blogs/' + urlAttribute.keyword + '.html'
                 },
                 controller: 'BlogController',
                 controllerAs: 'blog',
-                title: 'Blog'
+                title: 'Blog',
+                activetab: 'blogs'
             })
             .otherwise({
                 redirectTo: '/'
