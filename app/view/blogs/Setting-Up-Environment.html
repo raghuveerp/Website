@@ -1,0 +1,119 @@
+<section class="container-fluid  p-b-xl">
+    <div class="content">
+        <div class="layout-medium">
+            <h1 class="page-title greentext">CMPE 275 - Setting Up Environment</h1>
+            <div class="col-lg-10">
+                <h2>What is the environment?</h2>
+                
+                <p>
+                    The process of making a Java EE 5 Application needs few things to execute the program. An Application Server, a Database Server and an IDE. The IDE is where we will develop all the code. IDE is merely an editor. The work of Database server is to store the data and encorporate with the Application Server. The most important is the Application Server in case of a Java EE 5 environment. It contains the web server and all the containers of the Java EE 5 architecture where codes are executed.
+                </p>
+                
+                <p>
+                    To configure your IDE such that we are able to deploy the application that we made directly on the Application server without going thru the Admin console of Application server and making the Database server work in accordance with the needs of application server and the accessing data thru IDE again, is known as setting up the Environment. It reduces all the manual work of starting the servers from their admin consoles.
+                <p>
+                    Apart from these 3 basic things, configuring frameworks like hibernate (object relational mapping) for persistance or Struts / Spring framework which are the implementations of MVC model, is also included in configuring the environtment.
+                </p>
+                
+                <h2>How to set up the environment?</h2>
+                
+                <p>
+                    Before setting up the environment, we should first decide every integral part to be used i.e. we need to choose the application server, database server and the IDE. Let us start with the IDE first. There are 2 popularly used IDEs
+                    <ul>
+                        <li>NetBeans</li>
+                        <li>Eclipse</li>
+                    </ul>
+                </p>
+                
+                <p>Both of them are open source and are used widely.
+                    Application servers and database servers has a wide range again. Based on the needs, requirements and cost, one is choosed. Let us look at the widely available Application Servers which are available.
+                <ul>
+                    <li>Sun Application Server 9 - Free to download from the website of Sun Microsystems.</li>
+                    <li>BEA WebLogic 10 - Proprietary Licence but evalution version available for free download.</li>
+                    <li>IBM WebSphere 6 - Proprietary Licence but evalution version available for free download.</li>
+                    <li>Red Hat JBoss 5 (Beta) - Open Source and free to download under LGPL licence.</li>
+                    <li>Oracle Application Server 10G - Proprietary Licence.</li>
+                </ul>
+                
+                </p>
+                <p>
+                    All the above mentioned application servers supports the Java EE new Standards and are complaint for the EJB 3.0 applications. A version which is below than the above mentioned version may not be able to deploy EJB 3.0 application but will work fine with EJB 2.0 applications. So depending on the purpose we can always choose the Application Server accordingly.
+                </p>
+                <p>
+                    Next is another typical task of selecting the Database Server from the wide range. Let us see what all different database servers are available.
+                <ul>
+                    <li>Oracle Server - Proprietary Licence.</li>
+                    <li>MySQL Server - GPL or Proprietary Licence. Free to download for academic and personal use.</li>
+                    <li>DB2 - Proprietary Licence.</li>
+                </ul>
+                    
+                </p>
+                <p>
+                    All of them can be configured very easily with the application server and will support the J2EE Application very well.
+                    Many more Application Servers and Database servers are also available but explaining all of them is beyond the scope of this article.
+                    For explaining the setting up of environment, i will use JBoss application server and MySQL database server for NetBeans and BEA Weblogic application server and MySQL database server for Eclipse. This is just to introduce you all with the basic concept. The fundamental remains the same and you can always use any application server/ database server instead of the mentioned one.
+                </p>
+                <h2>Configuring NetBeans with JBoss</h2>
+                <p>Download the latest version of Netbeans from this <a href="http://www.netbeans.info/downloads/index.php">website</a>  and then install it on the computer. Note that there are many different versions of netbeans available. Please check the JDK version before downloading if you are downloading a Netbeans IDE bundled with JDK. An application based on EJB 3.0 specifications may not work at with JDK 1.4 or lower. There are also some different Application Servers which are already bundled with the IDE and you dont need to configure that Application Server with the IDE. But this article will introduce you with the basic concept and will configure using the simple Netbeans IDE without any bundle, for your understanding.
+                </p>
+                <p>
+                    Then install the JBoss Server servers. You can <a href="http://labs.jboss.com/jbossas/downloads">download it here</a>. Before downloading please note that JBoss Server 5.0.0 Beta 2 release is complaint with Java EE 5 applications. The downloaded file will be a .zip file and you just need to unzip it and place it in the desired folder. Try to keep the path as small as possible and thus it is suggested that unzip the Server in C:/JBoss.
+                </p>
+                <p>
+                    Then install the Database Server. Get the latest version of MySQL server from the website http://dev.mysql.com/downloads/mysql/5.0.htmlYou just need to install this, its a general setup like any other application setup. It will install the files at c:/Program Files/MySQL. After you have installed the server, please make an instance of the Database server. You can do this by going to MySQL instance config wizard.
+                    
+                    Select new instance --> Standar Configuration --> Service name as MySQL and check the include bin directory in windows path --> set you password --> Execute --> finish. The instance is created
+                    
+                    Now make a Datasource that we can use later for our purpose. To make a datasource, go to MySQL Command line prompt and type the following commands enter the password and on the command prompt write the following command.
+                    
+                    create database < yout database name > ;
+                    
+                    For example - if i want to make a datasourse by name computer then the command will becreate database computer;
+                    
+                    Now that we have installed all the 3 components individually, let us configure then one by one. Open the IDE now.
+                </p>
+                <p>
+                    We will first configure the Application Server. Go to Tools --> Server Management --> Add new Server.Browse the instance of the Application server and then ok. By instance, i mean that i need to give the path where i have installed the Application Server. In this case (according to this tutorial) the path should be C:/JBoss. Do next and finish it. Your Application Server is configured with the IDE.
+                </p>
+                <p>Now Configuring Database serverPrior to configure the database server with the IDE, please download the MySQL JDBC Connector. You can download it from http://dev.mysql.com/downloads/connector/j/5.0.html
+                </p>
+                <p>
+                    In Runtime window pane (look at the left pane), expand the Database and then right click on the driver --> new driver. A window will be opened. Add the JDBC Driver by browsing the folder where the driver is installed. Its a .jar file. At the time of writting this article the name of the jar file is mysql-connector-java-5.0.6-bin.jar. Check that in the drop down menu below this, the com.mysql.jdbc.Driver is selected. MySQL (Connector/J driver) is the standard name that will come by default. Click Ok.
+                </p>
+                <p>
+                    Now MySQL (Connector/J driver) will be added as a driver. Now right Click on it and select connect using. A new window will be opened. Define the Path of the datasource and create the instance of the Database server by defining the username and password. It will be something like this
+                    jdbc:mysql:<mysql-host>:<port>/<database>
+                    and click Ok.
+                </p>
+                <p>
+                    A new connection is added in the tree. To connect to this, right click on it and select connect and give the required password.
+                </p>
+                <p>
+                    Now configuring the Application Server with the Database Server. Every application server has a data source XML for every database server, we just need to configure this Data Source.xml with the database server by providing the username, password and the JNDI name for the application server to look at. Thus in case of JBoss, we will have to copy the mysql-ds.xml from /docs/examples/jca/mysql-ds.xml to the /server/default/deploy directory. Modify the mysql-ds.xml configuration file by setting
+                    
+                    <driver-class/>
+                    to com.mysql.jdbc.Driver and
+                    <connection-url/>
+                    to jdbc:mysql:
+                    <mysqlhost>
+                        /
+                        <database>
+                            , where
+                            <mysqlhost>
+                                is the MySQL host server and
+                                <database>
+                                    is the MySQL database. Database Server is configured with Application Server.
+                </p>
+                <p>
+                    Thats it. !!! Your application environment is configured and is ready to deploy any test application. To test it, you can deploy a sample application given at the following link http://www.netbeans.org/kb/55/ejb30-jboss.html
+                <h2> Configuring Hibernate</h2>
+                </p>
+                <p> Hibernate is an Object Relational Mapping utility which works above the EJB Container. Hibernate is an object-relational mapping (ORM) solution for the Java language: it provides an easy to use framework for mapping an object-oriented domain model to a traditional relational database. Its purpose is to relieve the developer from a significant amount of relational data persistence-related programming tasks.
+                </p>
+                <p> To configure Hibernate all we need to do is Install the Hinernate and Just add the .jar files of Hibernate in the class path of Application or Application Server. For example, configuring Hibernate with Weblogic, create the instance of the Application Server, configure connection pool and datasource, Create the required application and put the .jar files particularly hibernate.jar and additional 3rd party libraries in the APP-INF/lib folder of the application. Or just add these jar in the Classpath of the Project. Additionally, create the HibenateUtil class by copying the implementation from the Hibernate Reference. The Hibernate configuration file contains the JNDI name of the data source.
+                </p>
+                <p class=" p-b-xl"> Hola !!!Hibernate Configured with the Application. For further assistance, please refer http://dev2dev.bea.com/blog/pmalani/archive/2005/07/configuring_web_1.html
+            </div>
+        </div>
+    </div>
+</section>
