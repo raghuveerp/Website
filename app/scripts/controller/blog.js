@@ -8,6 +8,14 @@
  * Controller of the websiteApp
  */
 angular.module('raghuveer')
+    .filter('escape', function() {
+        return function(input) {
+            if(input) {
+                return window.encodeURIComponent(input);
+            }
+            return '';
+        }
+    })
     .controller('BlogController', function ($scope, $location) {
         $scope.oneAtATime = true;
 

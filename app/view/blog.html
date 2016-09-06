@@ -13,34 +13,35 @@
                                         {{heading}}
                                     </span>
                                 </a>
-                                
-                                <span class="toggle-social pull-right">
-                                <a ng-href="http://www.facebook.com/sharer.php?u={{blogsBaseURL}}" target="_blank" class="facebook p-r-m">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                                <a ng-href="https://twitter.com/share?url={{blogsBaseURL}}&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank" class="p-r-m">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank" class="p-r-m">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                                <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com" class="p-r-m">
-                                    <i class="fa fa-envelope"></i>
-                                </a>
-                            </span>
                             </h3>
-                        
                         </div>
                         
                         <div uib-collapse="!isOpen" ng-transclude class="toggle-content"></div>
                     </div>
                 </script>
+                
                 <uib-accordion close-others="oneAtATime">
                     <div uib-accordion-group class="panel-default" heading={{blog.title}} template-url="blogs-template.html" ng-repeat="blog in blogs">
                         {{blog.content}}
-                        <span class="p-l-m">
-                        <a ng-href="#/blog/{{blog.keyword}}" class="button small p-l-m">
-                        <i class="fa fa-external-link fa-fw"></i>Read More</a>
+                        
+                        <span class="pull-right">
+                            
+                            <a ng-href="http://www.facebook.com/sharer.php?u={{blogsBaseURL | escape }}/{{blog.keyword}}" target="_blank" class="facebook p-r-m">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a ng-href="https://twitter.com/home?status={{blog.title}} {{blogsBaseURL| escape }}/{{blog.keyword}}" target="_blank" class="p-r-m">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{blogsBaseURL | escape }}/{{blog.keyword}}&amp;title={{blog.title}}&amp;&summary={{blog.content}}" target="_blank" class="p-r-m">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:?Subject={{blog.keyword}}&amp;Body={{blogsBaseURL | escape }}/{{blog.keyword}}" class="p-r-m">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                            <a ng-href="#/blog/{{blog.keyword}}" class="button small p-l-m">
+                                <i class="fa fa-external-link fa-fw"></i>Read More
+                            </a>
+                            
                         </span>
                     </div>
                 </uib-accordion>
