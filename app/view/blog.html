@@ -2,29 +2,30 @@
     <div class="content">
         <div class="layout-medium">
             <h1 class="page-title greentext p-b-m">blogs</h1>
-            <div class="row">
-                <script type="text/ng-template" id="blogs-template.html">
-                    <div class="toggle-group">
-                        <div class="toggle">
-                            <h3 ng-click="toggleOpen()">
-                                <i class="greentext fa fa-fw" ng-class="{'fa-plus' : !isOpen, 'fa-minus': isOpen}"></i>
-                                <a href tabindex="0" class="accordion-toggle" uib-accordion-transclude="heading">
+            <div class="col-sm-9">
+                <div class="row">
+                    <script type="text/ng-template" id="blogs-template.html">
+                        <div class="toggle-group">
+                            <div class="toggle">
+                                <h3 ng-click="toggleOpen()">
+                                    <i class="greentext fa fa-fw" ng-class="{'fa-plus' : !isOpen, 'fa-minus': isOpen}"></i>
+                                    <a href tabindex="0" class="accordion-toggle" uib-accordion-transclude="heading">
                                     <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
                                         {{heading}}
                                     </span>
-                                </a>
-                            </h3>
+                                    </a>
+                                </h3>
+                            </div>
+                            
+                            <div uib-collapse="!isOpen" ng-transclude class="toggle-content"></div>
                         </div>
-                        
-                        <div uib-collapse="!isOpen" ng-transclude class="toggle-content"></div>
-                    </div>
-                </script>
-                
-                <uib-accordion close-others="oneAtATime">
-                    <div uib-accordion-group class="panel-default" heading={{blog.title}} template-url="blogs-template.html" ng-repeat="blog in blogs">
-                        {{blog.content}}
-                        
-                        <span class="pull-right">
+                    </script>
+                    
+                    <uib-accordion close-others="oneAtATime">
+                        <div uib-accordion-group class="panel-default" heading={{blog.title}} template-url="blogs-template.html" ng-repeat="blog in blogs">
+                            {{blog.content}}
+                            
+                            <span class="pull-right">
                             
                             <a ng-href="http://www.facebook.com/sharer.php?u={{blogsBaseURL | escape }}/{{blog.keyword}}" target="_blank" class="facebook p-r-m">
                                 <i class="fa fa-facebook"></i>
@@ -43,8 +44,12 @@
                             </a>
                             
                         </span>
-                    </div>
-                </uib-accordion>
+                        </div>
+                    </uib-accordion>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                
             </div>
         </div>
     </div>

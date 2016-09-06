@@ -18,20 +18,14 @@ angular.module('raghuveer')
     })
     .controller('BlogController', function ($scope, $location) {
         $scope.oneAtATime = true;
-
         $scope.blogsBaseURL = $location.$$absUrl;
-        console.log($scope.blogsBaseURL);
 
         $scope.blogs = [
             {
-                title: 'Blog Heading',
-                content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam commodi cupiditate dolores nam quos temporibus, vitae?',
-                keyword: 'blog1'
-            },
-            {
-                title: 'Another Blog Heading',
-                content: 'Commodi facere odit perspiciatis ratione, reiciendis suscipit voluptas. Atque labore natus veritatis voluptatum!',
-                keyword: 'blog1'
+                title: 'CMPE 275: Setting up environment',
+                content: 'This blog was written for class CMPE 275 under Prof. Kevin Chang, on how to setup initial environment for this course.',
+                keyword: 'Setting-Up-Environment',
+                date: 'Feb 4, 2009'
             }
         ];
 
