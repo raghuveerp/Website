@@ -19,10 +19,10 @@
                 
                 <p>
                     Before setting up the environment, we should first decide every integral part to be used i.e. we need to choose the application server, database server and the IDE. Let us start with the IDE first. There are 2 popularly used IDEs
-                    <ul>
-                        <li>NetBeans</li>
-                        <li>Eclipse</li>
-                    </ul>
+                <ul>
+                    <li>NetBeans</li>
+                    <li>Eclipse</li>
+                </ul>
                 </p>
                 
                 <p>Both of them are open source and are used widely.
@@ -46,7 +46,7 @@
                     <li>MySQL Server - GPL or Proprietary Licence. Free to download for academic and personal use.</li>
                     <li>DB2 - Proprietary Licence.</li>
                 </ul>
-                    
+                
                 </p>
                 <p>
                     All of them can be configured very easily with the application server and will support the J2EE Application very well.
@@ -54,22 +54,30 @@
                     For explaining the setting up of environment, i will use JBoss application server and MySQL database server for NetBeans and BEA Weblogic application server and MySQL database server for Eclipse. This is just to introduce you all with the basic concept. The fundamental remains the same and you can always use any application server/ database server instead of the mentioned one.
                 </p>
                 <h2>Configuring NetBeans with JBoss</h2>
-                <p>Download the latest version of Netbeans from this <a href="http://www.netbeans.info/downloads/index.php">website</a>  and then install it on the computer. Note that there are many different versions of netbeans available. Please check the JDK version before downloading if you are downloading a Netbeans IDE bundled with JDK. An application based on EJB 3.0 specifications may not work at with JDK 1.4 or lower. There are also some different Application Servers which are already bundled with the IDE and you dont need to configure that Application Server with the IDE. But this article will introduce you with the basic concept and will configure using the simple Netbeans IDE without any bundle, for your understanding.
+                <p>Download the latest version of Netbeans from this
+                    <a href="http://www.netbeans.info/downloads/index.php">website</a> and then install it on the computer. Note that there are many different versions of netbeans available. Please check the JDK version before downloading if you are downloading a Netbeans IDE bundled with JDK. An application based on EJB 3.0 specifications may not work at with JDK 1.4 or lower. There are also some different Application Servers which are already bundled with the IDE and you dont need to configure that Application Server with the IDE. But this article will introduce you with the basic concept and will configure using the simple Netbeans IDE without any bundle, for your understanding.
                 </p>
                 <p>
-                    Then install the JBoss Server servers. You can <a href="http://labs.jboss.com/jbossas/downloads">download it here</a>. Before downloading please note that JBoss Server 5.0.0 Beta 2 release is complaint with Java EE 5 applications. The downloaded file will be a .zip file and you just need to unzip it and place it in the desired folder. Try to keep the path as small as possible and thus it is suggested that unzip the Server in C:/JBoss.
+                    Then install the JBoss Server servers. You can
+                    <a href="http://labs.jboss.com/jbossas/downloads">download it here</a>. Before downloading please note that JBoss Server 5.0.0 Beta 2 release is complaint with Java EE 5 applications. The downloaded file will be a .zip file and you just need to unzip it and place it in the desired folder. Try to keep the path as small as possible and thus it is suggested that unzip the Server in C:/JBoss.
                 </p>
                 <p>
                     Then install the Database Server. Get the latest version of MySQL server from the website http://dev.mysql.com/downloads/mysql/5.0.htmlYou just need to install this, its a general setup like any other application setup. It will install the files at c:/Program Files/MySQL. After you have installed the server, please make an instance of the Database server. You can do this by going to MySQL instance config wizard.
-                    
+                
+                </p>
+                <p>
                     Select new instance --> Standar Configuration --> Service name as MySQL and check the include bin directory in windows path --> set you password --> Execute --> finish. The instance is created
-                    
+                </p>
+                <p>
                     Now make a Datasource that we can use later for our purpose. To make a datasource, go to MySQL Command line prompt and type the following commands enter the password and on the command prompt write the following command.
-                    
-                    create database < yout database name > ;
-                    
+                </p>
+                <p>
+                    create database &lt;your database name&gt; ;
+                </p>
+                <p>
                     For example - if i want to make a datasourse by name computer then the command will becreate database computer;
-                    
+                </p>
+                <p>
                     Now that we have installed all the 3 components individually, let us configure then one by one. Open the IDE now.
                 </p>
                 <p>
@@ -82,7 +90,12 @@
                 </p>
                 <p>
                     Now MySQL (Connector/J driver) will be added as a driver. Now right Click on it and select connect using. A new window will be opened. Define the Path of the datasource and create the instance of the Database server by defining the username and password. It will be something like this
-                    jdbc:mysql:<mysql-host>:<port>/<database>
+                
+                </p>
+                <p>
+                    jdbc:mysql:&lt;mysql-host&gt;:&lt;port&gt;/&lt;database&gt;
+                </p>
+                <p>
                     and click Ok.
                 </p>
                 <p>
@@ -90,29 +103,32 @@
                 </p>
                 <p>
                     Now configuring the Application Server with the Database Server. Every application server has a data source XML for every database server, we just need to configure this Data Source.xml with the database server by providing the username, password and the JNDI name for the application server to look at. Thus in case of JBoss, we will have to copy the mysql-ds.xml from /docs/examples/jca/mysql-ds.xml to the /server/default/deploy directory. Modify the mysql-ds.xml configuration file by setting
-                    
-                    <driver-class/>
-                    to com.mysql.jdbc.Driver and
-                    <connection-url/>
-                    to jdbc:mysql:
-                    <mysqlhost>
-                        /
-                        <database>
-                            , where
-                            <mysqlhost>
-                                is the MySQL host server and
-                                <database>
-                                    is the MySQL database. Database Server is configured with Application Server.
                 </p>
                 <p>
-                    Thats it. !!! Your application environment is configured and is ready to deploy any test application. To test it, you can deploy a sample application given at the following link http://www.netbeans.org/kb/55/ejb30-jboss.html
+                    
+                    &lt;driver-class/&gt;
+                    to com.mysql.jdbc.Driver and
+                    &lt;connection-url/&gt;
+                    to jdbc:mysql:
+                    &lt;mysqlhost&gt;
+                    /
+                    &lt;database&gt;
+                    , where
+                    &lt;mysqlhost&gt;
+                    is the MySQL host server and
+                    &lt;database&gt;
+                    is the MySQL database. Database Server is configured with Application Server.
+                </p>
+                <p>
+                    Thats it. !!! Your application environment is configured and is ready to deploy any test application. To test it, you can deploy this <a href="http://www.netbeans.org/kb/55/ejb30-jboss.html">sample application</a>
                 <h2> Configuring Hibernate</h2>
                 </p>
                 <p> Hibernate is an Object Relational Mapping utility which works above the EJB Container. Hibernate is an object-relational mapping (ORM) solution for the Java language: it provides an easy to use framework for mapping an object-oriented domain model to a traditional relational database. Its purpose is to relieve the developer from a significant amount of relational data persistence-related programming tasks.
                 </p>
                 <p> To configure Hibernate all we need to do is Install the Hinernate and Just add the .jar files of Hibernate in the class path of Application or Application Server. For example, configuring Hibernate with Weblogic, create the instance of the Application Server, configure connection pool and datasource, Create the required application and put the .jar files particularly hibernate.jar and additional 3rd party libraries in the APP-INF/lib folder of the application. Or just add these jar in the Classpath of the Project. Additionally, create the HibenateUtil class by copying the implementation from the Hibernate Reference. The Hibernate configuration file contains the JNDI name of the data source.
                 </p>
-                <p class=" p-b-xl"> Hola !!!Hibernate Configured with the Application. For further assistance, please refer http://dev2dev.bea.com/blog/pmalani/archive/2005/07/configuring_web_1.html
+                <p class=" p-b-xl"> Hola !!!Hibernate Configured with the Application. For further assistance,
+                    <a href="http://dev2dev.bea.com/blog/pmalani/archive/2005/07/configuring_web_1.html">read here</a>
             </div>
         </div>
     </div>
