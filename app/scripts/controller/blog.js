@@ -26,6 +26,13 @@ angular.module('raghuveer')
                 content: 'This blog was written for class CMPE 275 under Prof. Kevin Chang, on how to setup initial environment for this course.',
                 keyword: 'Setting-Up-Environment',
                 date: 'Feb 4, 2009'
+            },
+
+            {
+                title: 'CMPE 275: Setting up environment',
+                content: 'This blog was written for class CMPE 275 under Prof. Kevin Chang, on how to setup initial environment for this course.',
+                keyword: 'Setting-Up-Environment',
+                date: 'Feb 4, 2009'
             }
         ];
 
