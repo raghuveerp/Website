@@ -58,6 +58,9 @@ angular
                 title: 'Blog',
                 activetab: 'blogs'
             })
+            .when('/home', {
+                redirectTo: '/'
+            })
             .otherwise({
                 redirectTo: '/'
             });
