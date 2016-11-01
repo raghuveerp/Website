@@ -250,3 +250,9 @@ a:focus {
 .panel-default {
     border-color: #2E363A;
 }
+
+.sher-seperator {
+    border-bottom-color: #009966;
+    border-bottom-style: groove;
+    border-bottom-width: thick;
+}
