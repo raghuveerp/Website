@@ -253,6 +253,7 @@ a:focus {
 
 .sher-seperator {
     border-bottom-color: #009966;
-    border-bottom-style: groove;
-    border-bottom-width: thick;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 5px;
 }

@@ -778,7 +778,7 @@ label.error:after {
     padding: .9em 1em .6em 0em;
     margin: 0;
     cursor: pointer;
-    border-bottom: 1px solid #F4F3EF;
+    border-bottom: 1px solid #096;
 }
 
 .toggle-social {
@@ -786,7 +786,7 @@ label.error:after {
 }
 
 .toggle-content {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #096;
     font-size: 13px;
     padding-left: 25px;
     margin-top: 20px;
