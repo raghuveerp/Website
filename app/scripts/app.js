@@ -47,7 +47,7 @@ angular
                 templateUrl: 'view/blog.html',
                 controller: 'BlogController',
                 controllerAs: 'blog',
-                title: 'Blog'
+                title: 'Blogs'
             })
             .when('/blog/:keyword', {
                 templateUrl: function (urlAttribute) {
@@ -55,7 +55,7 @@ angular
                 },
                 controller: 'BlogController',
                 controllerAs: 'blog',
-                title: 'Blog',
+                title: 'Blogs',
                 activetab: 'blogs'
             })
             .when('/home', {
