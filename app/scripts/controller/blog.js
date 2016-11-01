@@ -29,7 +29,7 @@ angular.module('raghuveer')
             // }
 
             {
-                title : 'Sher-Meri-Shayari ...',
+                title : 'Sher O\'Shayari',
                 content : 'This is my attempt to express myself in the form of shayari .. ',
                 keyword : 'Shayari',
                 date : 'October 31, 2016'
