@@ -44,9 +44,9 @@ angular.module('raghuveer')
         // About Page
         var randomize = function () {
             var checked = {
-                0: true,
-                1: true,
-                2: true,
+                0: false,
+                1: false,
+                2: false,
                 3: false,
                 4: false,
                 5: false,
