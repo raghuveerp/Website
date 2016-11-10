@@ -1,6 +1,6 @@
 {
     "curly": true,
-    "eqeqeq": true,
+    "eqeqeq": false,
     "undef": true,
     "globals": {
         "jQuery": true
