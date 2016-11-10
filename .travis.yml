@@ -4,7 +4,7 @@ node_js:
   - '5.7.1'
 
 before_script:
-  - 'npm install -g bower grunt grunt-cli jshint karma'
+  - 'npm install -g bower grunt grunt-cli'
   - 'npm install'
   - 'bower install'
 
