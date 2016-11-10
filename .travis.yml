@@ -1,11 +1,10 @@
 language: node_js
 
 node_js:
-  - '0.10'
-  - '0.11'
+  - '5.7.1'
 
 before_script:
-  - 'npm install -g bower grunt-cli karma'
+  - 'npm install -g bower grunt grunt-cli jshint karma'
   - 'npm install'
   - 'bower install'
 
