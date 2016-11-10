@@ -21,40 +21,34 @@ angular
         $routeProvider
             .when('/', {
                 templateUrl: 'view/main.html',
-                controller: 'MainController',
-                controllerAs: 'main',
+                controller: 'defaultController',
                 title: 'Home'
             })
             .when('/about', {
                 templateUrl: 'view/about.html',
-                controller: 'AboutController',
-                controllerAs: 'about',
+                controller: 'defaultController',
                 title: 'About Me'
             })
             .when('/resume', {
                 templateUrl: 'view/resume.html',
-                controller: 'ResumeController',
-                controllerAs: 'resume',
+                controller: 'defaultController',
                 title: 'Resume'
             })
             .when('/contact', {
                 templateUrl: 'view/contact.html',
-                controller: 'ContactController',
-                controllerAs: 'contact',
+                controller: 'defaultController',
                 title: 'Contact Me'
             })
             .when('/blog', {
                 templateUrl: 'view/blog.html',
-                controller: 'BlogController',
-                controllerAs: 'blog',
+                controller: 'defaultController',
                 title: 'Blogs'
             })
             .when('/blog/:keyword', {
                 templateUrl: function (urlAttribute) {
                     return 'view/blogs/' + urlAttribute.keyword + '.html'
                 },
-                controller: 'BlogController',
-                controllerAs: 'blog',
+                controller: 'defaultController',
                 title: 'Blogs',
                 activetab: 'blogs'
             })
