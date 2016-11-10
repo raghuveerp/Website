@@ -21,13 +21,6 @@ angular.module('raghuveer')
         $scope.blogsBaseURL = $location.$$absUrl;
 
         $scope.blogs = [
-            // {
-            //     title: 'CMPE 275: Setting up environment',
-            //     content: 'This blog was written for class CMPE 275 under Prof. Kevin Chang, on how to setup initial environment for this course.',
-            //     keyword: 'Setting-Up-Environment',
-            //     date: 'Feb 4, 2009'
-            // }
-
             {
                 title : 'Sher O\'Shayari',
                 content : 'This is my attempt to express myself in the form of shayari .. ',
