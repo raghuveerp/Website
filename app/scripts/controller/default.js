@@ -80,4 +80,8 @@ angular.module('raghuveer')
             }
         ];
 
+        // Resume URL
+
+        $scope.resumeURL = "resources/Raghuveer.Resume.pdf";
+
     });
