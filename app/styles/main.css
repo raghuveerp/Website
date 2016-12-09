@@ -259,11 +259,9 @@ a:focus {
 }
 
 
-/* Bouncing icon*/
-.bouncehide {
-    block: none;
-}
-
+/* Bouncing
+shamelessly copied from: http://www.designermukesh.com/blog/create-infinite-bounce-effect-with-css3-animation/
+*/
 .bounce {
     position: absolute;
     bottom: 35px;
