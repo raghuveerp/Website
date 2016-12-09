@@ -1,5 +1,5 @@
 angular.module('raghuveer')
-    .directive('typedjs', function ($location) {
+    .directive('typedjs', function () {
         return {
             restrict: 'E',
             scope: {
@@ -17,7 +17,7 @@ angular.module('raghuveer')
                         loop: false,
                         cursorChar: "|",
                         callback: function(){
-                            $location.path("/about");
+                            $("#bounce i").addClass("fa fa-hand-o-down bounce");
                         }
                     };
 

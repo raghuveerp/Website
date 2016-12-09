@@ -30,6 +30,9 @@ angular.module('raghuveer')
         + 'Food is my love,^1000 scotch is my weakness,^1000\nlistening music makes me happy^1000 and ^1000\n'
         + 'exploring new places gives me pleasure.^800'];
 
+        // For debugging & testing purpose
+        // $scope.input = ['Hello my friend'];
+
         // Resume
         var fillBars = function () {
             $('.bar').each(function () {

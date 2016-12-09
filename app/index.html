@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <!-- endbuild -->
 </head>
-<body>
+<body ng-controller="defaultController">
     <!--[if lte IE 8]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
         your browser</a> to improve your experience.
@@ -39,11 +39,11 @@
     <![endif]-->
     
     <!-- .site-main -->
-    <div ng-view id="main" class="container-fluid">
+    <div ng-view id="main" class="container-fluid"></div>
     
-    </div>
+    <div ng-if="isActive('/')" id="bounce"><i class="fa-fw"></i></div>
     
-    <footer ng-controller="defaultController">
+    <footer>
         <!-- NAV MENU -->
         <nav id="primary-navigation" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
             <div class="container-fluid">
