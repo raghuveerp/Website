@@ -17,9 +17,13 @@ angular.module('raghuveer')
                         loop: false,
                         cursorChar: "|",
                         callback: function(){
-                            $location.path("/about");
+                            bounce();
                         }
                     };
+
+                function bounce() {
+                    $("#bounce i").addClass("fa fa-hand-o-down bounce");
+                }
 
                 $(function () {
                     $("#typedtext").typed(options);
