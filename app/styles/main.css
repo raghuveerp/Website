@@ -264,10 +264,10 @@ shamelessly copied from: http://www.designermukesh.com/blog/create-infinite-boun
 */
 .bounce {
     position: absolute;
-    bottom: 35px;
-    right: 22%;
-    width: 50px;
-    height: 50px ;
+    bottom: 5px;
+    left: 50%;
+    width: 100px;
+    height: 25px ;
     animation: bounce 3s infinite;
     -webkit-animation: bounce 3s infinite;
     -moz-animation: bounce 3s infinite;
