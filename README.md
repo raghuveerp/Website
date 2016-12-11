@@ -1,7 +1,8 @@
-# website
+# Website
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.12.1.
+[![Build Status](https://travis-ci.org/raghuveerp/website.svg?branch=master)](https://travis-ci.org/raghuveerp/website)
+
+Code for my personal website : [raghuveerphull.com](https://www.raghuveerphull.com). This is an Angular JS based application. 
 
 ## Build & development
 
@@ -11,4 +12,4 @@ Run `grunt` for building and `grunt serve` for preview.
 
 Running `grunt test` will run the unit tests with karma.
 
-[![Build Status](https://travis-ci.org/raghuveerp/website.svg?branch=master)](https://travis-ci.org/raghuveerp/website)
+
