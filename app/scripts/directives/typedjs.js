@@ -17,7 +17,7 @@ angular.module('raghuveer')
                         loop: false,
                         cursorChar: "|",
                         callback: function(){
-                            $("#bounce i").addClass("fa fa-hand-o-down bounce");
+                            $("#bounce i").addClass("fa fa-hand-o-down fa-lg bounce");
                         }
                     };
 
