@@ -17,8 +17,9 @@ angular
         'underscore',
         'ui.bootstrap'
     ])
-    .config(function ($routeProvider, $compileProvider) {
+    .config(function ($routeProvider, $compileProvider, $locationProvider) {
         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|tel|file|blob):/);
+        $locationProvider.hashPrefix('');
         $routeProvider
             .when('/', {
                 templateUrl: 'view/main.html',
