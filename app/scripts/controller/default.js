@@ -59,7 +59,8 @@ angular.module('raghuveer')
                 9: false,
                 10: false,
                 11: false,
-                12: false
+                12: false,
+                13: false
             };
 
             _.each(_.sample(_.keys(checked), 3), function (value) {
