@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  - '5.7.1
+  - '6.12.1'
 
 before_script:
   - 'npm install -g bower grunt grunt-cli'
