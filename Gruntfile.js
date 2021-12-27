@@ -16,7 +16,7 @@ module.exports = function (grunt) {
     require('jit-grunt')(grunt, {
         useminPrepare: 'grunt-usemin',
         ngtemplates: 'grunt-angular-templates',
-        cdnify: 'grunt-google-cdn'
+        // cdnify: 'grunt-google-cdn'
     });
 
     // Configurable paths for the application
@@ -24,6 +24,8 @@ module.exports = function (grunt) {
         app: require('./bower.json').appPath || 'app',
         dist: 'dist'
     };
+
+    var serveStatic = require('serve-static');
 
     // Define the configuration for all the tasks
     grunt.initConfig({
@@ -79,21 +81,32 @@ module.exports = function (grunt) {
                 hostname: 'localhost',
                 livereload: 35729
             },
+            // livereload: {
+            //     options: {
+            //         open: true,
+            //         middleware: function (connect) {
+            //             return [
+            //                 connect.static('.tmp'),
+            //                 connect().use(
+            //                     '/bower_components',
+            //                     connect.static('./bower_components')
+            //                 ),
+            //                 connect().use(
+            //                     '/app/styles',
+            //                     connect.static('./app/styles')
+            //                 ),
+            //                 connect.static(appConfig.app)
+            //             ];
+            //         }
+            //     }
+            // },
             livereload: {
                 options: {
-                    open: true,
                     middleware: function (connect) {
                         return [
-                            connect.static('.tmp'),
-                            connect().use(
-                                '/bower_components',
-                                connect.static('./bower_components')
-                            ),
-                            connect().use(
-                                '/app/styles',
-                                connect.static('./app/styles')
-                            ),
-                            connect.static(appConfig.app)
+                            serveStatic('.tmp'),
+                            connect().use('/bower_components', serveStatic('./bower_components')),
+                            serveStatic(appConfig.app)
                         ];
                     }
                 }
@@ -352,13 +365,6 @@ module.exports = function (grunt) {
             }
         },
 
-        // Replace Google CDN references
-        cdnify: {
-            dist: {
-                html: ['<%= yeoman.dist %>/*.html']
-            }
-        },
-
         // Copies remaining files to places other tasks can use
         copy: {
             dist: {
@@ -458,9 +464,9 @@ module.exports = function (grunt) {
         'autoprefixer',
         'ngtemplates',
         'concat',
-        // 'ngAnnotate',
+        'ngAnnotate',
         'copy:dist',
-        'cdnify',
+        // 'cdnify',
         'cssmin',
         'uglify',
         'filerev',
