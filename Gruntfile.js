@@ -25,6 +25,8 @@ module.exports = function (grunt) {
         dist: 'dist'
     };
 
+    var serveStatic = require('serve-static');
+
     // Define the configuration for all the tasks
     grunt.initConfig({
 
@@ -79,21 +81,32 @@ module.exports = function (grunt) {
                 hostname: 'localhost',
                 livereload: 35729
             },
+            // livereload: {
+            //     options: {
+            //         open: true,
+            //         middleware: function (connect) {
+            //             return [
+            //                 connect.static('.tmp'),
+            //                 connect().use(
+            //                     '/bower_components',
+            //                     connect.static('./bower_components')
+            //                 ),
+            //                 connect().use(
+            //                     '/app/styles',
+            //                     connect.static('./app/styles')
+            //                 ),
+            //                 connect.static(appConfig.app)
+            //             ];
+            //         }
+            //     }
+            // },
             livereload: {
                 options: {
-                    open: true,
                     middleware: function (connect) {
                         return [
-                            connect.static('.tmp'),
-                            connect().use(
-                                '/bower_components',
-                                connect.static('./bower_components')
-                            ),
-                            connect().use(
-                                '/app/styles',
-                                connect.static('./app/styles')
-                            ),
-                            connect.static(appConfig.app)
+                            serveStatic('.tmp'),
+                            connect().use('/bower_components', serveStatic('./bower_components')),
+                            serveStatic(appConfig.app)
                         ];
                     }
                 }
@@ -458,7 +471,7 @@ module.exports = function (grunt) {
         'autoprefixer',
         'ngtemplates',
         'concat',
-        // 'ngAnnotate',
+        'ngAnnotate',
         'copy:dist',
         'cdnify',
         'cssmin',
