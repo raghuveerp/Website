@@ -20,6 +20,7 @@
         "grunt-contrib-uglify": "=5.0.1",
         "grunt-contrib-watch": "=1.1.0",
         "grunt-karma": "=4.0.2",
+        "grunt-filerev": "=2.3.1",
         "grunt-legacy-log-utils": "=2.1.0",
         "grunt-newer": "=1.1.0",
         "grunt-release": "=0.14.0",
